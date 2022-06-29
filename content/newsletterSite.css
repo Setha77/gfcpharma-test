@@ -1,0 +1,247 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Popins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    height: 100%;
+}
+
+/* -----------   Nav Bar   ----------  */
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    height: 10vh;
+    top: 0;
+    left: 0;
+    background: white;
+    color: #333333;
+    padding: 0 2rem;
+    border-bottom: 1px solid black;
+    width: 100%;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    text-decoration: none;
+}
+
+.menu li a {
+    color: #333333;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+#check {
+    display: none;
+}
+
+.nav .checkbtn{
+    float: right;
+    right: 0;
+}
+/* ----------   newsletter   --------- */
+.main-page{
+    max-width: 1000px;
+    margin: 0 auto;
+    flex: 1;
+}
+
+#wrapper .banner, #wrapper h1{
+    width: 100%;
+}
+
+.banner img{
+    width: 100%;
+    overflow: hidden;
+}
+
+.one-col{
+    width: 100%;
+    height: auto;
+    line-height: 30px;
+    background-color: white;
+}
+/* ----------   footer   --------- */
+.footer{
+    display: flex;
+    height: 350px;
+    background: #3492fd;
+    }
+    .Navigation{
+       display: flex;
+       flex-direction: column;
+       height: 100%;
+       margin-left: 100px;
+       margin-top: 20px;
+    }
+    .Coordonnees{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        margin-left: 100px;
+        margin-top: 20px;
+       
+     }
+     .Credits{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+       margin-left: 100px;
+        margin-top: 20px;
+     }
+     .img{
+         display: flex;
+         justify-content: center;
+         text-align: center;
+         align-items: center;
+        
+     }
+    footer {
+        
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        border-top: 1px solid black;
+        position: relative;
+        height: 390px;
+        bottom:  0;
+        left: 0;
+        right: 0;
+       
+        background: #3492fd;
+        color: #333333;
+        padding: 0 2rem;
+        border-bottom: 1px solid black;
+    }
+    .imag{
+        width: 150px;
+        height: 150px;
+    }
+
+    h4 {
+        color: #333333;
+    }
+    .text a{
+        color: #333333;
+        text-decoration: none;
+        margin-top: 30px;
+        font-weight: 600;
+        
+    }
+    a{
+        font-weight: 500;
+    
+    }
+    .text p{
+        color: #333333;
+      
+        margin-top: 30px;
+        font-weight: 700px;
+    }
+    .bars {
+        display: flex;
+        font-size: 30px;
+        color: #2a4768;
+        float: right;
+        margin-right: 40px;
+    
+        line-height: 80px;
+        cursor: pointer;
+        display: none;
+    }
+
+
+    /* ---------- Responsive   ----------*/
+
+@media screen and (max-width: 850px) {
+    .sidebar img {
+        display: none;
+    }
+    .sidebar .tdb-img {
+        color: #83a4ff;
+    }
+    .sidebar span {
+        display: none;
+    }
+    .sidebar .top h3 {
+        display: none;
+    }
+    .sidebar {
+        width: 100px;
+    }
+    .sidebar a i {
+        display: block;
+        text-align: center;
+        margin-left: 0;
+        font-size: 25px;
+        line-height: 25px;
+    }
+}
+@media screen and (min-width: 500px) and (max-width:1230px) {
+    .checkbtn i {
+        display: flex;
+    }
+
+    .menu {
+        position: fixed;
+        height: 100vh;
+        background: #333333;
+        color: #ffffff;
+        top: 76px;
+        left: -110%;
+        text-align: center;
+        transition: all .5s;
+        width: 100%;
+        display: block;
+    }
+
+    .menu li a {
+        color: #ffffff;
+        margin: 0 100px;
+    }
+
+    .menu li {
+        margin-top: 80px;
+    }
+
+    nav ul li a .btn {
+        font-size: 20px;
+
+    }
+
+    a:hover {
+        background: none;
+        color: #eb9292;
+    }
+
+    .burger i {
+        display: flex;
+    }
+
+
+    #check:checked~.menu {
+        left: 0;
+    }
+
+    #check:checked~.btn {
+        left: 0;
+    }
+}

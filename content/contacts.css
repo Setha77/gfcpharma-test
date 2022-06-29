@@ -1,0 +1,250 @@
+*{
+    padding: 0;
+    margin: 2px;
+    box-sizing: border-box;
+    font-family: 'Popins',sans-serif;
+}
+
+
+body{
+    width: 100%;
+    height: 100vh;
+}
+
+
+.contact-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px 100px;
+    
+
+}
+.contact-container::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url("images/im2.jpg") no-repeat center;
+    background-size: cover;
+    z-index: -1;
+    filter: blur(50px);
+
+
+}
+
+
+.contact-box{
+    max-width: 850px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0.19);
+}
+
+
+.right-box{
+    height: 100%;
+    background: url("img/im2.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.left-box{
+    padding: 25px 40px;
+}
+
+h2{
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+h2::after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%);
+    height: 4px;
+    width: 50px;
+    border-radius: 2px;
+    background-color: #2ecc71;
+}
+
+.field{
+    width: 100%;
+    padding: 0.5rem 1rem;
+    background-color: rgba(230, 230, 230,0.6);
+    font-size: 1.1rem;
+    margin-bottom: 22px;
+    transition: .3s;
+    outline: none;
+    border: 2px solid rgba(0, 0, 0,0);
+}
+
+.field:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.field:focus{
+    background-color: #fff;
+    border: 2px solid rgba(30, 85,250, 0.47);
+}
+.area{
+    min-height: 150px;
+}
+.btn{
+    width: 100%;
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    background-color: #509be1;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    color: #fff;
+    transition: 0.3s;
+   
+}
+
+.btn:hover{
+
+    background-color: rgb(247, 150, 150);
+}
+
+
+/* -----------   Nav Bar   ----------  */
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    height: 10vh;
+    top: 0;
+    left: 0;
+    background: white;
+    color: #333333;
+    padding: 0 2rem;
+    border-bottom: 1px solid black;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    text-decoration: none;
+}
+
+.menu li a {
+    color: #333333;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+#check {
+    display: none;
+}
+
+.checkbtn{
+    float: right;
+    right: 0;
+    
+   
+}
+.checkbtn i {
+    display: none;
+}
+
+@media screen and (max-width:880px) {
+    .contact-box{grid-template-columns: 1fr;}
+    .right-box{height:200px}
+}
+
+/* ---------- Responsive   ----------*/
+
+@media screen and (max-width: 850px) {
+    .sidebar img {
+        display: none;
+    }
+    .sidebar .tdb-img {
+        color: #83a4ff;
+    }
+    .sidebar span {
+        display: none;
+    }
+    .sidebar .top h3 {
+        display: none;
+    }
+    .sidebar {
+        width: 100px;
+    }
+    .sidebar a i {
+        display: block;
+        text-align: center;
+        margin-left: 0;
+        font-size: 25px;
+        line-height: 25px;
+    }
+}
+@media screen and (min-width: 500px) and (max-width:1230px) {
+    .checkbtn i {
+        display: flex;
+    }
+
+    .menu {
+        position: fixed;
+        height: 100vh;
+        background: #333333;
+        color: #ffffff;
+        top: 76px;
+        left: -110%;
+        text-align: center;
+        transition: all .5s;
+        width: 100%;
+        display: block;
+    }
+
+    .menu li a {
+        color: #ffffff;
+        margin: 0 100px;
+    }
+
+    .menu li {
+        margin-top: 80px;
+    }
+
+    nav ul li a .btn {
+        font-size: 20px;
+
+    }
+
+    a:hover {
+        background: none;
+        color: #eb9292;
+    }
+
+    .burger i {
+        display: flex;
+    }
+
+
+    #check:checked~.menu {
+        left: 0;
+    }
+
+    #check:checked~.btn {
+        left: 0;
+    }
+}

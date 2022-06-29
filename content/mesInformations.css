@@ -1,0 +1,467 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Popins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    height: 100%;
+}
+
+.tbd-content {
+    
+    flex: 1;
+}
+
+/* -----------   Nav Bar   ----------  */
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    height: 10vh;
+    top: 0;
+    left: 0;
+    background: white;
+    color: #333333;
+    padding: 0 2rem;
+    border-bottom: 1px solid black;
+    width: 100%;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    text-decoration: none;
+}
+
+.menu li a {
+    color: #333333;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+#check {
+    display: none;
+}
+
+.nav .checkbtn{
+    float: right;
+    right: 0;
+}
+/* ----------   Sidebar   ----------*/
+
+.sidebar {
+    position: fixed;
+    background-color: #2F323A;
+    width: 20%;
+    height: 100%;
+    float: left;
+    display: grid;
+    justify-content: center;
+    border-radius: 1rem 0 0 0;
+}
+
+.top {
+    margin-top: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    height: 800px;
+}
+
+.sidebar a {
+    text-decoration: none;
+}
+
+.sidebar ul i {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+.sidebar ul li span {
+    color: #fff;
+    font-size: 16px;
+}
+
+.sidebar ul li {
+    margin: 3rem 0;
+}
+
+.sidebar ul a {
+    padding: 0.7rem;
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    transition: 0.2s;
+}
+
+.sidebar li a:hover {
+    background: rgb(250, 140, 140);
+    color: #fff;
+}
+
+.sidebar .img-profile {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    margin-bottom: 10px;
+}
+
+.sidebar h3 {
+    color: rgb(236, 229, 229);
+    margin-top: 0;
+}
+
+/* ----------   boutton   ---------- */
+
+.btn {
+    padding: 8px 22px;
+    background: #3492fd;
+    color: white;
+    border-radius: 5rem;
+    text-decoration: none;
+    margin-left: 100px;
+}
+
+.btn:hover {
+    background: #4199ff;
+}
+
+/* ---------- Body Content   ---------- */
+
+.body-container {
+    height: 100%;
+    width: 80%;
+    background: whitesmoke;
+    float: right;
+    border-radius: 0 1rem 0 0;
+}
+
+.body-container .Go a {
+    text-decoration: none;
+    padding: 3px 10px;
+    border-radius: 10px;
+    color: #2F323A;
+}
+
+.body-box {
+    display: flex;
+    margin-top: 10px;
+    height: 25%;
+    margin-left: 50px;
+}
+
+.body-box p {
+    display: flex;
+    justify-content: center;
+}
+
+.body-content h1 {
+    color: #2F323A;
+}
+
+.body-top-left {
+    height: 60%;
+    width: 45%;
+    background: #83a4ff;
+    border-radius: 1rem 1rem 1rem 1rem;
+    box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0.19);
+}
+
+.Go {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.Go a:hover {
+    background: #2F323A;
+    color: #fff;
+}
+
+.Go span {
+    margin-right: 0.5rem;
+}
+
+.title-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-left i {
+    font-size: 2rem;
+    margin-right: 0.5rem;
+}
+
+.title-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-right i {
+    font-size: 2rem;
+    margin-right: 0.5rem;
+}
+
+.body-top-right {
+    height: 60%;
+    width: 45%;
+    background: #83a4ff;
+    margin-left: 58px;
+    border-radius: 1rem 1rem 1rem 1rem;
+    box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0.19);
+}
+
+.grid-container {
+    /* ------ Box model ------ */
+    width: 91%;
+    height: 67%;
+    background: lightgrey;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    border-radius: 1rem 1rem 1rem 1rem;
+    box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0.19);
+
+    /* ------ Grid ------
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 0.25fr 3fr;
+    
+    column-gap: 10px;*/
+
+    /* ------ Flex ------ */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /*column-gap: 35px;*/
+    
+}
+
+/* ----------   Formulaire du container   --------- */
+.grid-title{
+    /*grid-column: 1 / span 2;*/
+    height: 10%;
+    width: 100%;
+    text-align: center;
+    background-color: yellowgreen;
+    border-radius: 1rem 1rem 0rem 0rem;
+}
+.flex-item-right-bottom{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-image{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.grid-left{
+    display: flex;
+    width: 49%;
+    height: 90%;
+    background-color: beige;
+    border-radius: 0rem 0rem 1rem 1rem;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+}
+
+.grid-right{
+    display: flex;
+    width: 49%;
+    height: 90%;
+    background-color: beige;
+    border-radius: 0rem 0rem 1rem 1rem;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+}
+
+.left-title, .right-title{
+    /*background-color: dodgerblue;*/
+    text-align: center;
+    width: 100%;
+    height: 10%;
+    /*background-color: dodgerblue;*/
+}
+
+.user-details{
+    border-radius: 1rem 1rem 1rem 1rem;
+    min-height: 400px;
+    width: 60%;
+    height: 30%;
+    /* ------ Flex ------ */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    /*background-color: yellowgreen;*/
+}
+
+.user-passwords{
+    border-radius: 1rem 1rem 1rem 1rem;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.input-box{
+    margin-top: 5px;
+    /*margin-left: 10%;*/
+    width: 250px;
+    height: 70px;
+    
+}
+
+
+.input-box input[type=text]{
+    width: 95%;
+    height: 30px;    
+}
+
+/* ----------   Bouton du container   --------- */
+
+.button-left, .button-right, .button-image{
+    height: 45px;
+    width: 110px;
+    /*margin-left: 10%;*/
+    display: flex;   
+}
+
+.button-left input, .button-right input, .button-image input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    background: #83a4ff;
+    
+}
+
+form .button-left input:hover, form .button-right input:hover, .button-image input:hover{
+    background: rgb(247, 150, 150);
+}
+
+/* ----------   footer   --------- */
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-top: 1px dashed black;
+    position: relative;
+    width: 100%;
+    height: 9vh;
+    top: 0;
+    left: 0;
+    background: #333333;
+    color: #333333;
+    padding: 0 2rem;
+    border-bottom: 1px solid black;
+}
+
+.menu_footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    text-decoration: none;
+}
+
+.menu_footer li a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+/* ---------- Responsive   ----------*/
+@media (max-width:600px){
+    
+    body{
+        overflow:auto;
+    }
+    /* ---------- Body Content   ---------- */
+
+    .body-container{
+        
+        height: 100vh;
+    }
+
+    .body-box{
+        background-color: green;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        height: 25%;
+        align-items: center;
+        justify-items: center;
+        margin-left: 0px;
+    }
+
+    .body-top-left, .body-top-right{
+        width: 70%;
+        height: 65%;
+        
+    }
+
+    .grid-container{
+        width: 85%;
+        height: min-content;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    /* ----------   Formulaire du container   --------- */
+    .grid-left, .grid-right{
+        display: flex;
+        width: 100%;
+        height: 90%;
+        background-color: beige;
+        border-radius: 0rem 0rem 1rem 1rem;
+        flex-direction: column;
+        justify-content:flex-start;
+        align-items: center;
+    }
+
+    .user-details,.user-passwords{
+        width: 100%;
+        
+    }
+}
